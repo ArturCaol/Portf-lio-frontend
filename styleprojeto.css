@@ -1,0 +1,204 @@
+*{
+    font-family: Roboto;
+}
+
+.body{
+    margin: 0px;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+}
+
+.headline1{
+    display: none;
+}
+
+.coluna1{
+    overflow: scroll;
+    margin-left: 20px;
+    text-align: left;
+    height: 100vh;
+}
+
+.icons{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    color: rgba(54, 71, 78, .7);
+    font-size: 30px;
+}
+
+.fa-stack:hover {
+    color: #36474e; 
+    cursor:pointer;
+}
+
+.imagem1{
+    background-size: cover;
+    height: 100vh;
+    width: 68vw;
+    display: block;
+    background-position: 50% 50%;
+}
+
+.headline{
+    line-height: 5px;
+}
+ 
+h1{
+    color: rgb(51, 51, 51);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h2{
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bio{
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.interests{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    font-weight: 400;
+    flex-wrap: wrap;   
+}
+
+.meta{
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+.section{
+    margin-top: 20px;
+}
+
+@media (max-width: 725px){
+    .headline{
+        display: none;
+    }
+    .principal{
+        display: block;
+    }
+
+    .profile-image{
+        position: relative;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .imagem1{
+        height: 100%;
+        width: 100%;
+    }
+
+    .profile-image .headline1{
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        display: block;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+    }
+
+    .interests{
+        text-align: center;  
+        justify-content: space-around;     
+    }
+
+    .meta{
+        text-align: center;
+    }
+
+    .coluna1{
+        overflow: auto;
+    }
+}
+
+@media (min-width: 726px) and (max-width: 1023px) {
+    .principal{
+        display: block;
+    }
+
+    .headline{
+        display: none;
+    }
+
+    .profile-image{
+        position: relative;
+        text-align: center;
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .imagem1{
+        height: 100%;
+        width: 100%;
+    }
+
+    .profile-image .headline1{
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        display: block;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+    }
+
+    .interests{
+        margin-left: 25%;
+        margin-right: 25%;
+        text-align: center;  
+        justify-content: space-around;     
+    }
+
+    .meta{
+        text-align: center;
+    }
+
+    .coluna1{
+        overflow: auto;
+    }
+
+    .bio{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .icons{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+
+@media (min-width:1440px){
+    .principal{
+        align-items: center;
+    }
+
+    .imagem1{
+        width: 68vw;
+        height: 100vh;
+    }
+}
+

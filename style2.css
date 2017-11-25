@@ -1,0 +1,33 @@
+.columns{
+    display: flex;
+    border: solid;
+    border-width: 2px;
+    height: 100vh;
+    align-items: flex-end;
+}
+
+.column{
+    flex-grow: 1;
+    border: solid;
+    border-width: 2px;
+}
+
+.column:nth-child(1){    
+    height: 90%;
+    background-color: red;
+}
+
+.column:nth-child(2){
+    height: 30%;
+    background-color: green;
+}
+
+.column:nth-child(3){
+    height: 70%;
+    background-color: blue;
+}
+
+.column:nth-child(4){
+    height: 20%;
+    background-color: yellow;
+}

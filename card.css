@@ -1,0 +1,128 @@
+*{
+    font-family: Roboto;
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(53, 53, 78);
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+}
+
+.principal{
+    margin-top: 1%;
+    min-height: 500px;
+    max-height: 550px;
+    max-width: 30%;
+    background: white;
+    display: block;
+    box-shadow: 2px 2px 7px 2px rgb(20, 20, 77);
+    border-radius: 5px;
+    border-style: none;
+}
+
+.imagem{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+}
+
+.imagem1{
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    background-position: 50% 50%;
+    border: 10px solid rgb(2, 2, 119);
+    border-radius: 110px;
+    border-style: none;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.imagem1 .imagem2{
+    position: absolute;
+    height: 35px;
+    width: 40px;
+    border: 7px solid white;
+    border-radius: 50px;
+    right: 4px;
+    bottom: 2px;
+}
+
+.imagem1:hover{
+    border-style: solid;
+    cursor: pointer;
+    height: 220px;
+    width: 220px;
+    border-radius: 120px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+}
+
+.prof{
+    display: block;
+}
+
+p{
+    text-align: center;    
+}
+
+.textoo{
+    margin-right: 4%;
+    margin-left: 4%;
+    line-height: 20px;
+    color: #333333;
+}
+
+.icones{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color:rgb(2, 2, 119);
+    font-size: 24px;
+    margin-top: 7%;
+}
+
+.fa{
+    transition: all 0.5s ease;
+}
+
+.fa:hover{
+    color: rgb(101, 101, 228);
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.nome{
+    margin-bottom: 0px;
+    margin-top: 2%;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(2, 2, 119);
+    transition: all 0.5s ease;
+}
+
+.nome:hover{
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.sub{
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.corpo{
+    height: 50%;
+}
