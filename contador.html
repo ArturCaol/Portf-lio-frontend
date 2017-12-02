@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contador</title>
+</head>
+
+<body>
+    <div class="total">0</div>
+    <button onclick="atualizarTotal(1)">+1</button>
+    <button onclick="multiplicarTotal(5)">*5</button>
+    <button onclick="atualizarTotal(10)">+10</button>
+    <button onclick="multiplicarTotal(20)">*20</button>
+
+    <script>
+        function atualizarTotal(n){
+            var total = document.querySelector('.total');
+            total.textContent = parseInt(total.textContent) + n;
+        }
+
+        function multiplicarTotal(n){
+            var total = document.querySelector('.total');
+            total.textContent = parseInt(total.textContent) * n;
+        }
+    </script>
+
+</body>
+
+</html>
+
