@@ -9,22 +9,41 @@
 </head>
 
 <body>
-    <div class="total">0</div>
-    <button onclick="atualizarTotal(1)">+1</button>
-    <button onclick="multiplicarTotal(5)">*5</button>
-    <button onclick="atualizarTotal(10)">+10</button>
-    <button onclick="multiplicarTotal(20)">*20</button>
+    <h1 class="hello">Hello World</h1>
+    <h1 id="fizz">Fizz Buzz</h1>
+    <h1 class="jd">John Doe</h1>
+
+    <button class="botao" data-cor1="red" data-cor2="black" data-target="#fizz">red</button>
+    <button class="botao" data-cor1="green" data-cor2="black" data-target=".hello">green</button>
+    <button class="botao" data-cor1="blue" data-cor2="black" data-target=".jd">blue</button>   
 
     <script>
-        function atualizarTotal(n){
-            var total = document.querySelector('.total');
-            total.textContent = parseInt(total.textContent) + n;
+        var contador = parseInt(2);
+
+        var allButtons = document.querySelectorAll('.botao');
+        console.log(allButtons);
+
+        for(i=0; i < allButtons.length; i++){
+            allButtons[i].addEventListener('click', mudarCor);
+        }        
+
+        function mudarCor(){
+            var status = this.dataset.status;
+            var coloracao = this.dataset.cor1;
+            var selecionado = document.querySelector(this.dataset.target);
+            
+            if(status != 'on'){ 
+                console.log('true');               
+                selecionado.style.color = coloracao;
+                this.dataset.status = 'on';
+            } else {
+                console.log('false');
+                coloracao = this.dataset.cor2;
+                selecionado.style.color = coloracao;
+                this.dataset.status = 'off';
+            }
         }
 
-        function multiplicarTotal(n){
-            var total = document.querySelector('.total');
-            total.textContent = parseInt(total.textContent) * n;
-        }
     </script>
 
 </body>
