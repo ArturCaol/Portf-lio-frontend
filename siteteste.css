@@ -452,7 +452,9 @@ ul.submenu li{
     
     .menusuper{
         display: flex;
-        max-width: 990px
+        max-width: 990px;
+        animation-name: slidein-up;
+        animation-duration: 1s;
     }
     
     .box1{
@@ -616,5 +618,23 @@ ul.submenu li{
     }
     to {
         transform: translateX(0);
+    }
+}
+
+@keyframes slidein-down {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slidein-up {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
     }
 }
