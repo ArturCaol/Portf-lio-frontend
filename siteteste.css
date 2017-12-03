@@ -298,6 +298,7 @@ ul.submenu li{
 }
 
 @media (min-width: 768px){
+
     .menusuper{
         display: flex;
         padding: 20px;
@@ -441,6 +442,26 @@ ul.submenu li{
 
 
 @media (min-width: 1024px){
+
+    /*FIXED NAVIGATION*/  
+
+    .navigation-fixed .menusupertodo{
+        z-index: 100;
+        padding-top: 5px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        color: #01affa;
+        box-shadow: 0px 1px 20px rgba(0,0,0,0.75);
+    }   
+    
+    .navigation-fixed .menusuper{
+        background-color: white;
+        color: #01affa;
+    }   
+
+    /*END*/
+
     .menusupermobile{
         display: none;
     }
@@ -448,6 +469,10 @@ ul.submenu li{
     *{
         margin: 0;
         padding: 0;
+    }
+
+    .menusupertodo{
+        width: 100%;
     }
     
     .menusuper{
