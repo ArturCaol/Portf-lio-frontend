@@ -1,0 +1,72 @@
+*{
+    font-family: Roboto;
+}
+
+body{
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+.superior,.menu,.esquerda,.direita{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    justify-content: space-between;
+    width: 80%;
+}
+
+.logofilme{
+    width: 91px;
+    height: 81px;
+}
+
+.superior,.inferior{
+    width: 100%;
+}
+
+.superior{
+    background-color: #081c24;
+}
+
+.inferior{
+    height: 47px;
+}
+
+.esquerda{
+    padding-left: 0px;    
+    list-style: none;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.direita{
+    list-style: none;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.esquerda,.direita{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+.box1{
+    width: 90%;
+}
+
+.caixa1{
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+
