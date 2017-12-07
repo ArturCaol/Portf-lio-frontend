@@ -48,20 +48,15 @@
         </section>
     </section>
     <section class="corpo">
-        <h1 class="titulo"></h1>
-        <h2 class="genero"></h2>
-        <p class="descricao"></p>
+        <ul class="filmess">
+            
+        </ul>
     </section>
         
     <script>
         
         var button = document.querySelector('.btn');
-        var filmes = {};
-
-        var resultadoTitulo = document.querySelector('.titulo');
-        var resultadoGenero = document.querySelector('.genero');
-        var resultadoDescricao = document.querySelector('.descricao');
-        var moviesUl = document.querySelector('#movies');
+        var filmesId = document.querySelector('.filmess')
 
         button.addEventListener('click', buscarInfo);
 
@@ -80,7 +75,7 @@
             
             for (i=0; i < data.Search.length; i++){
                 var dataId = data.Search[i].imdbID;
-
+                
                 console.log(dataId);
                 buscarInfoID(dataId);                
             }                       
@@ -100,10 +95,13 @@
             var dataTitulo = data2.Title;
             var dataGenero = data2.Genre;
             var dataDescricao = data2.Plot;
+            var dataPoster = data2.Poster;
+            var dataReleased = data2.Released;
+            var dataRating = data2.imdbRating;
 
-            resultadoTitulo.textContent = dataTitulo;
-            resultadoGenero.textContent = dataGenero;
-            resultadoDescricao.textContent = dataDescricao;
+            filmesId.innerHTML += '<li class="filme"><div class="cartaz"><img class="poster" src=' + data2.Poster + 'alt="poster"/></div>' + 
+            '<div class="info"><h1>Titulo: ' + dataTitulo + '</h1>' + '<h2>Genero: ' + dataGenero + '</h2>' + '<h3>Lançamento: ' 
+            + dataReleased + '<p>Descrição: ' + dataDescricao + '</p>' + '<p>Nota Imdb: ' + dataRating + '</p></li></div>'; 
         }
 
     </script>
@@ -112,4 +110,3 @@
 
 
 </html>
-
