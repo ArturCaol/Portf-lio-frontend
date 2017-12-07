@@ -48,20 +48,29 @@
         </section>
     </section>
     <section class="corpo">
-        <ul class="filmess">
-            
+        <ul class="indice">
+            <li class="contFilmes">Filmes</li>
+            <li class="contSeries">Séries</li>
         </ul>
+        <div class="resultados">
+            <h1 class="super">Resultados para filmes e séries:</h1>
+            <ul class="filmess"></ul>
+        </div>
     </section>
         
     <script>
         
         var button = document.querySelector('.btn');
         var filmesId = document.querySelector('.filmess')
+        var QuantFilmes = document.querySelector('.contFilmes');
+        var QuantSeries = document.querySelector('.contSeries');
 
         button.addEventListener('click', buscarInfo);
 
         function buscarInfo(){
             var selecionado = document.querySelector('.caixa1').value;
+            var contF = 0;
+            var contS = 0;
 
             var oReq = new XMLHttpRequest();
             oReq.onload = reqListerner;
@@ -98,10 +107,11 @@
             var dataPoster = data2.Poster;
             var dataReleased = data2.Released;
             var dataRating = data2.imdbRating;
+            var dataTipo = data2.Type;
 
             filmesId.innerHTML += '<li class="filme"><div class="cartaz"><img class="poster" src=' + data2.Poster + 'alt="poster"/></div>' + 
-            '<div class="info"><h1>Titulo: ' + dataTitulo + '</h1>' + '<h2>Genero: ' + dataGenero + '</h2>' + '<h3>Lançamento: ' 
-            + dataReleased + '<p>Descrição: ' + dataDescricao + '</p>' + '<p>Nota Imdb: ' + dataRating + '</p></li></div>'; 
+            '<div class="info"><h1>Titulo: ' + dataTitulo + '</h1>' + '<h3>Genero: ' + dataGenero + '</h3>' + '<p>Tipo: ' + dataTipo + '</p>'  
+            + '<p>Lançamento: ' + dataReleased + '</p>' + '<p>Descrição: ' + dataDescricao + '</p>' + '<p>Nota Imdb: ' + dataRating + '</p></li></div>'; 
         }
 
     </script>
