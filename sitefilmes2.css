@@ -2,6 +2,11 @@
     font-family: Roboto;
 }
 
+.topo{
+    width: 100vw;
+    height: 164px;
+}
+
 body{
     padding: 0px 0px;
     margin: 0px 0px;
@@ -29,10 +34,13 @@ body{
 
 .superior{
     background-color: #081c24;
+    height: 75%;
 }
 
 .inferior{
-    height: 47px;
+    height: 25%;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .esquerda{
@@ -73,6 +81,11 @@ body{
     padding: 0px 5px;
 }
 
+.super{
+    margin: 0 0;
+    padding: 10px;
+}
+
 .filme{
     display: flex;
     height: 300px;
@@ -82,37 +95,50 @@ body{
 }
 
 .cartaz{
-    min-width: 200px;
-    max-width: 201px;
-    height: 300px;
+    min-width: 300px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.cartaz:hover{
+    transform: scale(1.1, 1.1);
+    z-index: 100;
 }
 
 .poster{
     width: 100%;
+    height: 100%;    
+}
+
+.cartaz .info{
+    width: 100%;
     height: 100%;
+    bottom: 0px;
+    position: absolute;
 }
 
 .info{
-    padding-left: 25px;
-    max-width: 500px;
-    background-color: rgb(245, 239, 239);
-    max-height: 300px;
-    min-height: 299px;
+    display: none;
+    color: rgb(235, 232, 232);
+    padding: 5px 5px;
+    max-width: 95%;
+}
+
+.cartaz:hover > .info{
+    display: block;
 }
 
 .corpo{
+    width: 97%;
+    margin: auto;
     display: flex;
-    justify-content: center;    
+    align-items: center;  
+    padding-top: 20px;
 }
 
-.indice{
-    list-style: none;
-    width: 210px;
-    padding-right: 50px;
-}
-
-.resultados{
-    width: 741px;
+.botoes{
+    padding: 0px 15px;
 }
 
 .contFilmes,.contSeries{
@@ -126,15 +152,17 @@ body{
 }
 
 .filmess{
-    padding: 0 0;
-    width: 100%;
+    padding: 20px 0px;
+    width: 95%;
+    display: flex;
+    overflow-x: hidden;
 }
 
 .filme{
-    margin: 20px 0px;
+    margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: calc(100% / 4);
+    height: 400px;
     box-shadow: 0px 1px 2px gray;
     background-color: rgb(245, 239, 239);
 }
